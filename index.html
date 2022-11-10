@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/sdk/lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="assets/js/sdk/apigClient.js"></script>
+</head>
+<body>
+    <h1>Photo Album</h1>
+    <div>
+        <h2>Search</h2>
+        <input type="search" id="search-input" name="searchform" placeholder="Search query">
+        <button id="search-button">Search</button>
+        <button id="record-button">Record</button> 
+        <button id="stop-button">Stop</button>
+        <h2>Upload</h2>
+        <input type="text" id="label-input" name="labelform" placeholder="Label for Uploaded Image">
+        <input type="file" id="upload-button" name="uploadbutton">
+        <button id="submit-button">Submit</button>
+        <span id="upload-status"></span>
+    </div>
+    <div id="album-div">
+    </div>  
+
+    <script>
+        var sdk = apigClientFactory.newClient({
+            apiKey: '1MeyVxayee1FKAXOLCSlj4Wvd0irKT5h6IUbCwPq'
+        });
+    </script>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
