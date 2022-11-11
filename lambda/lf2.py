@@ -23,7 +23,7 @@ lex = boto3.client('lexv2-runtime')
 
 def get_indiv_s3_paths(label):
     query = {
-              'size': 10,
+              'size': 12,
               'query': {
                 'multi_match': {
                   'query': label,
