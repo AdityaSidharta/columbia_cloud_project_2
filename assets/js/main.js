@@ -115,4 +115,7 @@ $( document ).ready(function() {
     $("#submit-button").click(function(event) {
         upload();
     })
+    $("#upload-button").click(function(event) {
+        $('#upload-status').val(transcript);
+    })
 })
