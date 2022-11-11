@@ -45,7 +45,9 @@ def get_s3_paths(labels):
     else:
       result = get_indiv_s3_paths(label)
     final_result.append(result)
+    print("result : {}".format(result))
   final_result = list(set.intersection(*map(set,final_result)))
+  print("final result : {}".format(final_result))
   return final_result[:12]
 
 def get_labels(s3_path):
