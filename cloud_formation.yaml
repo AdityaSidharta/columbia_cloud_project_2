@@ -24,6 +24,11 @@ Resources:
                     Event: "s3:ObjectCreated:*"
                     Function: !GetAtt LambdaFunction2.Arn
 
+    S3Bucket3:
+        Type: "AWS::S3::Bucket"
+        Properties:
+            BucketName: "album-lambdas"
+
     LambdaFunction:
         Type: "AWS::Lambda::Function"
         Properties:
