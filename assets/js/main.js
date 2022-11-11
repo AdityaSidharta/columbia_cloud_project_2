@@ -116,6 +116,7 @@ $( document ).ready(function() {
         upload();
     })
     $("#upload-button").click(function(event) {
-        $('#upload-status').val(transcript);
+        console.log("New File Requested")
+        $('#upload-status').text("");
     })
 })
