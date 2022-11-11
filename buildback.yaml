@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - bash scripts/deploy_lf1.sh
+      - bash scripts/deploy_lf2.sh
+      - ls
+      - aws lambda update-function-code --function-name lf1-album --zip-file fileb://lf1.zip > out
+      - aws lambda update-function-code --function-name lf2-album --zip-file fileb://lf2.zip > out
+artifacts:
+   files:
+     - '**/*'
