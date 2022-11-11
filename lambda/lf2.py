@@ -23,7 +23,7 @@ lex = boto3.client('lexv2-runtime')
 
 def get_indiv_s3_paths(label):
     query = {
-              'size': 12,
+              'size': 100,
               'query': {
                 'multi_match': {
                   'query': label,
@@ -45,11 +45,12 @@ def get_s3_paths(labels):
     else:
       result = get_indiv_s3_paths(label)
     final_result.append(result)
-  return list(set.intersection(*map(set,final_result)))
+  final_result = list(set.intersection(*map(set,final_result)))
+  return final_result[:12]
 
 def get_labels(s3_path):
     query = {
-              'size': 20,
+              'size': 100,
               'query': {
                 'multi_match': {
                   'query': s3_path,
