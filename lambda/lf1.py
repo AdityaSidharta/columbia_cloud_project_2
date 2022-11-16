@@ -21,7 +21,7 @@ opensearch = OpenSearch(
 )
 
 def lambda_handler(event, context):
-    print("Hello")
+    print("Hello World")
     print("Received event: " + json.dumps(event))
     try:
         bucket = event['Records'][0]['s3']['bucket']['name']

@@ -70,7 +70,7 @@ def process(item):
     return ''.join(x for x in item if x.isalpha()).lower()
 
 def lambda_handler(event, context):
-    print("Hello")
+    print("Hello World")
     print("event received : {}".format(event))
     print("context received : {}".format(context))
 
